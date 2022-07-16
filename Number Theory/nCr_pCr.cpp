@@ -1,16 +1,6 @@
-int sizee=1000000;
+const int sizee=1000000;
 int fact[sizee+1];
-//call this function form int main
-void pre_calculate()
-{
-	fact[0]=1;
-	for(int i=1;i<=sizee;i++)
-	{
-		fact[i] = fact[i-1]*i; 
-		fact[i]%=mod;
-	}
-}
-
+int inv[sizee+1];
 int bepower(int x,int n)
 {
 	int res=1;
@@ -27,18 +17,25 @@ int bepower(int x,int n)
 	}
 	return res;
 }
+//call this function form int main
+void precompute()
+{
+	fact[0]=1;
+	inv[0]=1;
+	for(int i=1;i<=sizee;i++)
+	{
+		fact[i] = fact[i-1]*i; 
+		fact[i]%=mod;
+		inv[i]=bepower(fact[i],mod-2);
+	}
+}
 
 int ncr(int n,int r)
 {
-	int temp1 = fact[n];
-	int temp2 = (fact[n-r]*fact[r])%mod;
-	temp1*=bepower(temp2,mod-2);
-	return temp1%mod;
+	return (((fact[n]*inv[n-r])%mod)*inv[r])%mod;
 }
 
 int npr(int n,int r)
 {
-	int temp1 = fact[n];
-	temp1*=bepower(fact[n-r],mod-2);
-	return temp1%mod;
+	return (fact[n]*inv[n-r])%mod;
 }

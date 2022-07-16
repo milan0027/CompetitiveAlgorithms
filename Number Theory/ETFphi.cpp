@@ -1,7 +1,7 @@
-int sizee=1000000;
+const int sizee=1000000;
 int phi[sizee+1];
 //call this function form int main
-void pre_calculate()
+void precalculate()
 {
 	for(int i=0;i<=sizee;i++)
 		phi[i]=i;
