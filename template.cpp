@@ -25,7 +25,7 @@ using namespace std;
 #define inn(a,n) int n; cin>>n; vector<int> a(n); for(int i=0;i<n;i++) cin>>a[i];
 #define ink(a,n,k) int n,k; cin>>n>>k; vector<int> a(n); for(int i=0;i<n;i++) cin>>a[i];
 #define out(a) for(auto x9: a) cout<<x9<<" "; cout<<"\n";
-#define test int t; cin>>t; while(t--)
+#define test int _; cin>>_; for(int tt=1;tt<=_;tt++)
 #define en "\n"
 #define sz(a) (int)a.size()
 #define sortf(a) sort(a.begin(),a.end())
@@ -37,8 +37,8 @@ using namespace std;
 #define fastio ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
 const int mod = 1000000007;
 //const int mod = 998244353;
-const int N = 200001, inf = 2100000000;
-const lld eps = 1e-6, pi = 3.1415926535897932;
+const int inf = 2100000000;
+const lld pi = 3.1415926535897932;
 const long long INF = 1e18+5;
 //typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> pbds;
 // ans val flag temp fin fish eye kill stat tic tac time cnt cost
@@ -59,16 +59,11 @@ int32_t main()
    
  
 }
- 
 /*
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
 */
