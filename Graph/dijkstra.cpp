@@ -1,4 +1,4 @@
-void dijkstra(int src, vi &d, vi &p, vvi &adj) {
+void dijkstra(int src, vi &d, vi &p, vvpii &adj) {
     int n = adj.size();
     d.assign(n, INF);
     p.assign(n, -1);

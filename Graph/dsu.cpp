@@ -15,7 +15,7 @@ class dsu{
     }
     
     int findset(int i){
-        if(par[i]==i)
+        if(par[i]==i) 
             return i;
         
         return par[i]=findset(par[i]);
